@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(204, 242, 255);
+    color: rgb(110, 24, 24);
+    font-family: Arial;
+    margin: 0px;
+  
+}
+header {
+    background-color:rgb(243, 199, 219);
+    color: rgb(73, 0, 61); padding: 20px; font-size: 16pt;
+    font-family: Arial;
+    margin: 0px;
+}
+main {
+    background-color:rgb(200, 224, 233);
+    color: rgb(73, 0, 61); padding: 20px; 
+    font-family: Arial;
+    margin: 0px;
+}
+footer {
+    background-color:  rgb(243, 199, 219); color: rgb(121, 36, 30); 
+        padding: 20px; font-size: 16pt; font-style: italic; text-align: left;
+}
