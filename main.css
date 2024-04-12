@@ -21,3 +21,24 @@ footer {
     background-color:  rgb(243, 199, 219); color: rgb(121, 36, 30); 
         padding: 20px; font-size: 16pt; font-style: italic; text-align: left;
 }
+a {
+    color: rgb(156, 0, 135);
+    text-decoration: none;
+}
+a:link {
+    color: rgb(189, 45, 177);
+}
+a:visited {
+    color: rgb(124, 25, 33);
+    box-shadow: 10px 10px 5px #0002;
+    opacity: 0.3;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+    box-shadow: 10px 10px 5px #0002;
+}
+a:active {
+    color: black;
+    opacity: 0.3;
+}
