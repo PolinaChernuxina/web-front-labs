@@ -15,11 +15,16 @@ main {
     background-color:rgb(200, 224, 233);
     color: rgb(73, 0, 61); padding: 20px; 
     font-family: Arial;
-    margin: 0px;
+    margin: 10px 20px 65px;
+
 }
 footer {
     background-color:  rgb(243, 199, 219); color: rgb(121, 36, 30); 
         padding: 20px; font-size: 16pt; font-style: italic; text-align: left;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
 }
 a {
     color: rgb(156, 0, 135);
