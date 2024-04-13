@@ -15,6 +15,14 @@
             let result = a + b;
             alert("Сумма " + a + " и " + b + " равна " + result);
         }
+        function showAuthor() {
+            let author = "Автор страницы: \nЧернухина Полина Валерьевна"
+            alert(author);
+        }
+        function showFooter() {
+            let f = "Приветствую вас на моей странице! \nКто не рискует, то не пьёт шампанского!"
+            alert(f);
+        }
     </script>
     <style>
         .message {
@@ -28,10 +36,16 @@
             padding: 20px; 
             box-sizing: border-box;
         }
+        .header {
+            cursor: pointer;
+        }
+        .footer {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header" conclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 4
     </header>
 
@@ -39,12 +53,12 @@
        <div class="message" onclick="showSum()">
         Сколько будет 5154+7891?
        </div>
-       <div class="message">
+       <div class="message" onclick="showAuthor()">
         Узнать, кто автор страницы
        </div>
     </main>
 
-    <footer>
+    <footer class = "footer" ondblclick="showFooter()">
         &copy; Чернухина Полина, ФБИ-23, 2 курс, 2024
     </footer>
 
