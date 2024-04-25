@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чернухина Полина Валерьевна. Лабораторная работа 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+       function calculateTotal() {
+            let total = 0;
+            total += getProductTotal(document.getElementById("product1").value, 150);
+            total += getProductTotal(document.getElementById("product2").value, 200);
+            total += getProductTotal(document.getElementById("product3").value, 120);
+            total += getProductTotal(document.getElementById("product4").value, 300);
+            total += getProductTotal(document.getElementById("product5").value, 400);
+            document.getElementById("total").textContent = "Итого: " + total.toFixed(2) + " руб";
+        }
+
+        function getProductTotal(quantity, price) {
+            return quantity * price;
+        }
+
+        function clearCart() {
+            document.getElementById("product1").value = "";
+            document.getElementById("product2").value = "";
+            document.getElementById("product3").value = "";
+            document.getElementById("product4").value = "";
+            document.getElementById("product5").value = "";
+            document.getElementById("total").textContent = "";
+        }
+    </script>
+    <style>
+        .cart {
+            display: inline-block;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+
+        .cart h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .product {
+            margin-bottom: 20px;
+        }
+
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <div class="cart">
+            <h1>Корзина товаров</h1>
+    
+            <div class="product">
+                <label for="product1">Яблоки:</label>
+                <input type="number" id="product1" min="0" placeholder="Сколько яблок надо?" /> x 150 руб/кг
+            </div>
+    
+            <div class="product">
+                <label for="product2">Апельсины:</label>
+                <input type="number" id="product2" min="0" placeholder="Сколько апельсинов надо?" /> x 200 руб/кг
+            </div>
+    
+            <div class="product">
+                <label for="product3">Бананы:</label>
+                <input type="number" id="product3" min="0" placeholder="Сколько бананов надо?" /> x 120 руб/кг
+            </div>
+    
+            <div class="product">
+                <label for="product4">Киви:</label>
+                <input type="number" id="product4" min="0" placeholder="Сколько киви надо?" /> x 300 руб/кг
+            </div>
+    
+            <div class="product">
+                <label for="product5">Виноград:</label>
+                <input type="number" id="product5" min="0" placeholder="Сколько винограда надо?" /> x 400 руб/кг
+            </div>
+    
+            <button onclick="calculateTotal()">Рассчитать</button>
+            <button onclick="clearCart()">Очистить</button>
+    
+            <div class="total" id="total"></div>
+        </div>
+    
+    </main>
+
+    <footer>
+        &copy; Чернухина Полина, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
