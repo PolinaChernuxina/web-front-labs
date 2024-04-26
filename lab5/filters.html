@@ -34,6 +34,11 @@
             document.getElementById("hueRotateOutput").innerText = value;
             document.getElementById("blurImage5").style.filter = "hue-rotate(" + value + ")";
         }
+        function invertChange() {
+            let value = document.getElementById("invertValue").value + "%";
+            document.getElementById("invertOutput").innerText = value;
+            document.getElementById("blurImage6").style.filter = "invert(" + value + ")";
+        }
     </script>
 </head>
 <body>
@@ -76,6 +81,13 @@
             <span id="hueRotateOutput"></span>
             <div><img src="собакен.jpg" id="blurImage5"></div>
         </div>
+
+        <div>
+            Фильтр invert:
+            <input type="range" min="0" max="100" value="0" onchange="invertChange()" id="invertValue">
+            <span id="invertOutput"></span>
+        </div>
+        <div><img src="собакен.jpg" id="blurImage6"></div>
     </main> 
 
     <footer>
