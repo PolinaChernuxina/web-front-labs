@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чернухина Полина Валерьевна. Лабораторная работа 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="number"] {
+            width: 60px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+        <label for="balance">Мой баланс:</label>
+        <input type="number" id="balance" value="1000">
+    
+        <h2>Корзина товаров</h2>
+        <div>
+            <label for="item1">Товар 1:</label>
+            <input type="number" id="item1" value="0"> x 100 руб.
+        </div>
+        <div>
+            <label for="item2">Товар 2:</label>
+            <input type="number" id="item2" value="0"> x 200 руб.
+        </div>
+        <div>
+            <label for="item3">Товар 3:</label>
+            <input type="number" id="item3" value="0"> x 300 руб.
+        </div>
+        <div>
+            <label for="item4">Товар 4:</label>
+            <input type="number" id="item4" value="0"> x 400 руб.
+        </div>
+        <div>
+            <label for="item5">Товар 5:</label>
+            <input type="number" id="item5" value="0"> x 500 руб.
+        </div>
+        <div>
+            <label for="item6">Товар 6:</label>
+            <input type="number" id="item6" value="0"> x 600 руб.
+        </div>
+        <div>
+            <label for="item7">Товар 7:</label>
+            <input type="number" id="item7" value="0"> x 700 руб.
+        </div>
+    
+        <button onclick="calculateTotal()">ОК</button>
+        <div id="result"></div>
+    
+        <script>
+            function calculateTotal() {
+                const balance = parseFloat(document.getElementById('balance').value);
+                const item1 = parseFloat(document.getElementById('item1').value);
+                const item2 = parseFloat(document.getElementById('item2').value);
+                const item3 = parseFloat(document.getElementById('item3').value);
+                const item4 = parseFloat(document.getElementById('item4').value);
+                const item5 = parseFloat(document.getElementById('item5').value);
+                const item6 = parseFloat(document.getElementById('item6').value);
+                const item7 = parseFloat(document.getElementById('item7').value);
+    
+                let total = 0;
+                let allZero = true;
+                let negativeQuantity = false;
+    
+                if (item1 < 0 || item2 < 0 || item3 < 0 || item4 < 0 || item5 < 0 || item6 < 0 || item7 < 0) {
+                    negativeQuantity = true;
+                }
+    
+                if (!negativeQuantity) {
+                    if (item1 > 0) {
+                        total += item1 * 100;
+                        allZero = false;
+                    }
+                    if (item2 > 0) {
+                        total += item2 * 200;
+                        allZero = false;
+                    }
+                    if (item3 > 0) {
+                        total += item3 * 300;
+                        allZero = false;
+                    }
+                    if (item4 > 0) {
+                        total += item4 * 400;
+                        allZero = false;
+                    }
+                    if (item5 > 0) {
+                        total += item5 * 500;
+                        allZero = false;
+                    }
+                    if (item6 > 0) {
+                        total += item6 * 600;
+                        allZero = false;
+                    }
+                    if (item7 > 0) {
+                        total += item7 * 700;
+                        allZero = false;
+                    }
+                }
+    
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = '';
+    
+                if (negativeQuantity) {
+                    resultDiv.textContent = 'Ошибка: количество товара не может быть отрицательным.';
+            } else if (allZero) {
+                resultDiv.textContent = 'Вы должны выбрать хотя бы один товар.';
+            } else if (total > balance) {
+                resultDiv.textContent = `Общая сумма: ${total} руб. Недостаточно средств на балансе.`;
+            } else {
+                resultDiv.textContent = `Общая сумма: ${total} руб. Заказ успешно оформлен.`;
+            }
+        }
+    </script>
+    </main>
+
+    <footer>
+        &copy; Чернухина Полина, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
