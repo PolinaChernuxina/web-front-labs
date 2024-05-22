@@ -32,6 +32,22 @@
             line-height: 40px;
             background-color: lightgreen;
         }
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .circle {
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(239, 251, 255);
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
     </style>
     <script>
         function addNewBlock() {
@@ -63,6 +79,18 @@
                 main.appendChild(newBlock);
             }
         }
+        function add10_m80() {
+            let main = document.querySelector('main');
+            let circleContainer = document.createElement('div');
+            circleContainer.classList.add('circle-container');
+            for(let i = 10; i >= -80; i -= 3) {
+                let circle = document.createElement('div');
+                circle.classList.add('circle');
+                circle.textContent = i;
+                circleContainer.appendChild(circle);
+            }
+            main.appendChild(circleContainer);
+        }
     </script>
 </head>
 <body>
@@ -76,6 +104,7 @@
         <button onclick="addNewBlock()">Добавить блок</button>
         <button onclick="addNewBlocks()">Добавить блоки</button>
         <button onclick="add20_50()">20 => 50</button>
+        <button onclick="add10_m80()">10 => -80</button>
     </main>
 
     <footer>
