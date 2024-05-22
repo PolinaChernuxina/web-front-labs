@@ -15,12 +15,32 @@
             height: 40px;
             margin: 10px;
         }
+        .added-block {
+            border: 2px solid purple;
+            height: 40px;
+            margin: 10px;
+            text-align: center;
+            line-height: 40px;
+        }
     </style>
     <script>
         function addNewBlock() {
             let newBlock = document.createElement('div');
             newBlock.classList.add('new-block');
+
             document.querySelector('main').appendChild(newBlock);
+        }
+        function addNewBlocks() {
+            let main = document.querySelector('main');
+            let numBlocks = parseInt(document.getElementById('num-blocks').value) || 10;
+            for(let i = 0; i<numBlocks; i++) {
+                let newBlock = document.createElement('div');
+                newBlock.classList.add('added-block');
+                newBlock.style.width = `${200 + i*20}px`;
+                newBlock.innerHTML = `Блок № ${i+1}: 2*${i}<sup>2</sup> = ${2 * i**2}`;
+
+                main.appendChild(newBlock);
+            }
         }
     </script>
 </head>
@@ -30,7 +50,10 @@
     </header>
 
     <main>
+        <label for="num-blocks">Количество блоков:</label>
+        <input type="number" id="num-blocks" value="10" min="1">
         <button onclick="addNewBlock()">Добавить блок</button>
+        <button onclick="addNewBlocks()">Добавить блоки</button>
     </main>
 
     <footer>
