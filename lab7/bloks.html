@@ -8,6 +8,21 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon-16x16.png">
     <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        .new-block {
+            border: 2px solid blue;
+            width: 200px;
+            height: 40px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function addNewBlock() {
+            let newBlock = document.createElement('div');
+            newBlock.classList.add('new-block');
+            document.querySelector('main').appendChild(newBlock);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -15,12 +30,10 @@
     </header>
 
     <main>
-        <ul>
-            <li><a href="bloks.html">Добавление блоков</a></li>
-        </ul>
+        <button onclick="addNewBlock()">Добавить блок</button>
     </main>
 
-       <footer>
+    <footer>
         &copy; Чернухина Полина, ФБИ-23, 2 курс, 2024
     </footer>
 </body>
