@@ -22,6 +22,16 @@
             text-align: center;
             line-height: 40px;
         }
+        .custom-block {
+            border: 1px solid black;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            background-color: lightgreen;
+        }
     </style>
     <script>
         function addNewBlock() {
@@ -42,6 +52,17 @@
                 main.appendChild(newBlock);
             }
         }
+        function add20_50() {
+            let main = document.querySelector('main');
+            for(let i = 20; i<=50; i+=2.5) {
+                let newBlock = document.createElement('div');
+                newBlock.classList.add('custom-block');
+
+                newBlock.innerHTML = `${i}`;
+
+                main.appendChild(newBlock);
+            }
+        }
     </script>
 </head>
 <body>
@@ -54,6 +75,7 @@
         <input type="number" id="num-blocks" value="10" min="1">
         <button onclick="addNewBlock()">Добавить блок</button>
         <button onclick="addNewBlocks()">Добавить блоки</button>
+        <button onclick="add20_50()">20 => 50</button>
     </main>
 
     <footer>
