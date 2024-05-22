@@ -59,6 +59,14 @@
             font-size: 18px;
             background-color: rgb(148, 141, 132);
         }
+        .odd-circle {
+            background-color: red;
+            color: white;
+        }
+        .even-circle {
+            background-color: green;
+            color: white;
+        }
     </style>
     <script>
         function addNewBlock() {
@@ -112,6 +120,28 @@
                 main.appendChild(opacityBlock);
             }
         }
+        main.appendChild(circleContainer);
+        
+        function addColoredCircles() {
+            let main = document.querySelector('main');
+            let numCircles = parseInt(document.getElementById('num-circles').value) || 10;
+            let circleContainer = document.createElement('div');
+            circleContainer.classList.add('circle-container');
+
+            for(let i = numCircles; i > 0; i--) {
+                let circle = document.createElement('div');
+                circle.classList.add('circle');
+                if (i % 2 === 1) {
+                    circle.classList.add('odd-circle');
+                } else {
+                    circle.classList.add('even-circle');
+                }
+                circle.textContent = i;
+                circleContainer.appendChild(circle);
+            }
+
+            main.appendChild(circleContainer);
+        }
     </script>
 </head>
 <body>
@@ -127,6 +157,10 @@
         <button onclick="add20_50()">20 => 50</button>
         <button onclick="add10_m80()">10 => -80</button>
         <button onclick="add10OpacityBlocks()">Добавить 10 блоков с прозрачностью</button>
+        <br>
+        <label for="num-circles">Количество цветных кругов:</label>
+        <input type="number" id="num-circles" value="10" min="1">
+        <button onclick="addColoredCircles()">Цветные круги</button>
     </main>
 
     <footer>
