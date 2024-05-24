@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Модульбанк</title>
+    <link rel="shortcut icon" href="../bank.ico" type="image/x-icon">
+    <link rel="icon" href="../bank-16x16.png">
+    <link rel="icon" href="../bank-32x32.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: rgb(21, 21, 153);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 110px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    nav a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    nav a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    main {
+      margin-left: 170px;
+      padding: 20px;
+    }
+    h3 {
+      color: #333;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    h2 {
+        color: #333;
+        text-shadow: 3px 3px 30px rgba(56, 72, 219, 0.5);
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    p {
+      line-height: 1.5;
+    }
+    .company-logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 500px;
+      
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+        background-color: rgb(21, 21, 153);
+        color: #fff;
+        padding: 10px;
+        text-align: right;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    header h1 {
+        color: #fff;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+    .log {
+        font-weight: 300;
+        font-style: italic;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 18px;
+    }
+    .company-images {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .company-images img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 0 30px;
+      box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .text2 {
+        margin-top: 40px;
+    }
+    .step-circle {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #6ca9eb;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        div {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .credit-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .credit-info img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        }
+        .apply-btn {
+            display: inline-block;
+            background-color: #60a7f3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        }
+        .apply-btn:hover {
+            background-color: #0056b3;
+        }
+        .apply-btn:active {
+            background-color: #033a75;
+        }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="list1.html">О компании</a>
+    <a href="news.html">Новости</a>
+    <a href="currency.html">Курс валют</a>
+    <a href="contacts.html">Контактные данные</a>
+    <a href="video.html">Видео</a>
+  </nav>
+  <header>
+    <h1>Модульбанк &mdash; первый банк для предпренимателей.</h1>
+  </header>
+  <main>
+    <div>
+      <h2>Перейти в Модульбанк — легко</h2>
+      <p class="log">Сделаем всё за вас и поможем на старте</p>
+    </div>
+    <div class="credit-info">
+        <ul>
+            <li><strong>Быстро откроем счёт</strong></li>
+            <p>Сможете получать деньги уже через 5 минут — ещё до встречи с менеджером</p>
+            <li><strong>Соблюдаем формальности</strong></li>
+            <p>Сообщим новые реквизиты налоговой и подготовим письмо для ваших партнёров</p>
+            <li><strong>Поможем освоиться</strong></li>
+            <p>Расскажем о возможностях банка и решим в чате любой вопрос</p>
+        </ul>
+        <img src="https://sun9-44.userapi.com/impg/lzRFL5-eOuNazvDfj4Kad-frCZ_bObj6jKZdmw/s07Qr-4njbQ.jpg?size=306x235&quality=96&sign=ad1f7f086f75baf07ab6b741cfcc5214&type=album" 
+        alt="деньги">
+    </div>
+    <div>
+      <h3>История компании</h3>
+      <p>Создан как финтех-проект в структуре банка «Региональный кредит» в 2014 году, в 2016 году «поглотил» материнский банк. 
+        На 2022-й присвоенный АКРА кредитный рейтинг банка BB-(RU), прогноз «Стабильный».</p>
+        <p>Основатели Модульбанка <u>Олег Лагута</u>, <u>Яков Новиков</u> и <u>Андрей Петров</u> познакомились во время работы над 
+        развитием обслуживания малого и среднего бизнеса (МСБ) в Сбербанке. К идее банковского продукта для полностью 
+        дистанционного обслуживания предпринимателей они пришли, когда разрабатывали новую стратегию для Сбербанка, но 
+        многие их идеи было невозможно реализовать в рамках большого госбанка. В феврале 2014 года они представили наработки
+         Герману Грефу и через месяц уволились, чтобы заняться собственным проектом.</p>
+    </div>
+    <div class="company-images">
+        <img src="https://storage.yandexcloud.net/incrussia-prod/wp-content/uploads/2018/01/v2-2.jpg" alt="Картинка 1">
+        <img src="https://cdn-4.vedomosti.ru/image/2019/1k/11dmcx/medium-1cfy.gif" alt="Картинка 2">
+        <img src="https://biz360.ru/upload/medialibrary/bbd/%D0%AF%D0%BA%D0%BE%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B8%D0%BA%D0%BE%D0%B2.jpg" 
+        alt="Картинка 3">
+      </div>
+    <div>
+      <h2 class="text2">Кредит под любой запрос</h2>
+      <p><strong>Кредит для селлеров</strong></p>
+      <p>Быстрый и простой способ получить деньги на закупку товара, лимит рассчитывается от выручки с маркетплейсов</p>
+      <p><strong>Оборотный кредит</strong></p>
+      <p>Лимит этого кредита зависит от оборотов. Такой тип кредита подойдёт компаниям с опытом ведения бизнеса от 6 месяцев</p>
+    </div>
+    <div>
+        <h2 class="text2">Как получить кредит</h2>
+        <div class="credit-info">
+            <div>
+                <p><span class="step-circle">1</span>Оставьте заявку</p>
+                <p><span class="step-circle">2</span>Получите несколько решений — мы поможем выбрать оптимальное</p>
+                <p><span class="step-circle">3</span>Подпишите договор и откройте счёт в Модульбанке для поступления выручки от маркетплейсов</p>
+                <a href="https://modulbank.ru/credit/marketplace/" class="apply-btn">Оставить заявку</a>
+            </div>
+            <img src="https://sun9-9.userapi.com/impg/UDIRiQ0oJMvPKu0lgM4wLhyuy2yM7hk4wSZgag/MgHPG3bXdd4.jpg?size=536x464&quality=96&sign=de4b97c5465d8e80ef7cb81b84031e5a&type=album" 
+            alt="Картинка">
+        </div>
+    </div>
+    <img class="company-logo" src="https://toplogos.ru/images/logo-modulbank.png.png" alt="Логотип компании">
+
+  </main>
+  <footer>
+    <p>&copy; 2024 АО КБ "Модульбанк". Все права защищены.</p>
+  </footer>
+</body>
+</html>
