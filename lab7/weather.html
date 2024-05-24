@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чернухина Полина Валерьевна. Лабораторная работа 8</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        .weather-info {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .weather-info h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .weather-info p {
+            margin: 10px 0;
+        }
+        .weather-info .source {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #5b62c7;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 30px rgba(56, 72, 219, 0.5);
+        }
+        .btn:hover {
+            background-color: #34219e;
+        }
+    </style>
+    <script>
+        function Weather() {
+            const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+            fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(json) {
+                const temperatures = json.hourly.temperature_2m;
+                const morningTemp = temperatures[8].toFixed(1);
+                const noonTemp = temperatures[12].toFixed(1);
+                const eveningTemp = temperatures[20].toFixed(1);
+
+                const infoElement = document.getElementById('weather-info');
+                infoElement.innerHTML = `
+                    <h2>Температура в Новосибирске</h2>
+                    <p>Утром (8:00): ${morningTemp}°C</p>
+                    <p>В полдень (12:00): ${noonTemp}°C</p>
+                    <p>Вечером (20:00): ${eveningTemp}°C</p>
+                    <div class="source">
+                        Источник: <a href="https://open-meteo.com/" target="_blank">open-meteo.com</a>
+                    </div>
+                `;
+            })
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button class="btn" onclick="Weather()">Прогноз погоды для Новосибирска на сегодняшний день</button>
+        <div id="weather-info" class="weather-info"></div>
+    </main>
+
+    <footer>
+        &copy; Чернухина Полина, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
