@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чернухина Полина Валерьевна. Лабораторная работа 8</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script src="lab8.js"></script>
+</head>
+<style>
+    #current-date {
+       font-family: Arial, sans-serif;
+       font-size: 18px;
+       color: #6d431e;
+       margin: 10px 10px;
+       margin-bottom: 10px;
+   }
+</style>
+
+<body onload="showDate()">
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <div id="current-date"></div>
+
+        <label for="day">День:</label>
+        <input type="number" id="day" min="1" max="31">
+
+        <label for="month">Месяц:</label>
+        <input type="number" id="month" min="1" max="12">
+
+        <label for="year">Год:</label>
+        <input type="number" id="year" min="1970">
+
+        <button type="button" id="submit-button">День недели</button>
+
+        <p id="result"></p>
+    </main>
+
+    <footer>
+        &copy; Чернухина Полина, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
