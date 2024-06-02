@@ -8,6 +8,8 @@ function showDate() {
     out.innerHTML += '<br>Бразилия: ' + today.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
     out.innerHTML += '<br>Франция: ' + today.toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
 
-    
-
+    out.innerHTML += '<br>Текущий год: ' + today.getFullYear();
+    out.innerHTML += '<br>Текущий месяц: ' + (today.getMonth() + 1);
+    out.innerHTML += '<br>Текущая дата: ' + today.getDate();
+    out.innerHTML += '<br>День недели: ' + today.toLocaleString('ru-RU', { weekday: 'long' });
 }
